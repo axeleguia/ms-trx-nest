@@ -4,6 +4,7 @@ import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
 import { Logger } from 'nestjs-pino/Logger';
 import { AppModule } from './app.module';
+require('dotenv').config()
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
