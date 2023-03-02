@@ -2,29 +2,30 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) server to consume Swapi API and Internal DB.
+
+1. Write an **HTTP GET** method to retrieve all information from the **planets** and **people** databases from [SWAPI](https://swapi.dev/) with a **limit** param. For example, if parameter A is 5, you will get only 5 elements of the total. Consider not using the internal database, but get the data directly from SWAPI.
+2. Write an **HTTP GET** method to retrieve information from the **planets** databases from [SWAPI](https://swapi.dev/) and save information in a internal database.
+3. Write an **HTTP GET** method to retrieve information from **people** databases from [SWAPI](https://swapi.dev/) and save information in a internal database.
+4. Write an **HTTP POST** method to save any information about **people** in your database.  
+
+Below are the endpoints that you will implement:
+
+| INFO | METHOD | URL |
+| --- | --- | --- |
+| GET PLANETS WITH LIMIT | GET | :baseURL/api/planets?limit=:limit |
+| GET PEOPLE WITH LIMIT | GET | :baseURL/api/people?limit=:limit |
+| GET ANY PLANET BY ID | GET | :baseURL/api/planets/:planetId |
+| GET ANY PERSON BY ID | GET | :baseURL/api/people/:personId |
+| POST ANY PERSON | POST | :baseURL/api/people |
+
+### Diagram: 
+
+<img src="assets/images/diagram.jpg" width="500" alt="Demo">
 
 ## Installation
 
@@ -45,29 +46,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Testing API
+Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The application will show Swagger API docs.
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<img src="assets/images/api.jpg" width="500" alt="Demo">
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Author - Axel Leguía Chero
+- Linkedin - [https://www.linkedin.com/in/axel-leguia-chero/](https://www.linkedin.com/in/axel-leguia-chero/)

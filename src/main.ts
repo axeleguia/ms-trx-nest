@@ -12,8 +12,8 @@ async function bootstrap() {
   app.enableCors();
   // app.useGlobalPipes(new ValidationPipe());
   const config = new DocumentBuilder()
-    .setTitle('Nest Trx Test - API')
-    .setDescription('This a simple Swagger config to test API server.')
+    .setTitle('Nest Trx - API')
+    .setDescription('This a simple Swagger config to API server.')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
